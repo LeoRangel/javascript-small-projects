@@ -1,36 +1,4 @@
-/* Variabes */  
-$dark: #1F1E1F;
-
-
-/* Mixin's */  
-@mixin transition {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-@mixin corners ($radius) {
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  border-radius: $radius; 
-  -khtml-border-radius: $radius; 
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  // font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  background-color: white;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-}
+@import "./global";
 
 main {
   width: 100%;
@@ -49,7 +17,7 @@ main {
   @include corners (5px);
   border: solid 1px $dark;
 
-  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
+  box-shadow: $box-shadow;
 }
 
 
