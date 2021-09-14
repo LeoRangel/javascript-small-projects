@@ -1,0 +1,77 @@
+@import "./global";
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  padding: 20px;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  background-color: $dark;
+  @include corners (5px);
+}
+
+.input {
+  height: 40px;
+  padding: 10px;
+  border-radius: 1px;
+  font-size: 2em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow-x: auto;
+  background-color: rgba(255, 255, 255, .2);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  color: white;
+
+  display: grid;
+  grid-template-areas:
+  'operators operators operators operators'
+  'leftPanel leftPanel leftPanel equal'
+  'leftPanel leftPanel leftPanel equal';
+  gap: 10px;
+
+  .operators div,
+  .numbers div,
+  .equal {
+    display: inline-block;
+    border: 1px solid white;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include corners (5px);
+  }
+
+  .operators {
+    grid-area: operators;
+    display: flex;
+    gap: 10px;
+  }
+  .leftPanel {
+    grid-area: leftPanel;
+    display: grid;
+    gap: 10px;
+
+    .numbers {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  .equal {
+    grid-area: equal;
+    height: auto;
+  }
+}
