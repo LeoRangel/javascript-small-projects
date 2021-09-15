@@ -1,0 +1,41 @@
+@import "./global";
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  padding: 20px;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  background-color: $dark;
+  color: white;
+  @include corners (5px);
+  max-width: 300px;
+}
+
+#results {
+  display: none;
+}
+
+input {
+  background-color: rgba(255,255,255,.2) !important;
+  color: white !important;
+}
+
+.input-group-addon {
+  background-color: rgba(255,255,255,.2) !important;
+  color: white !important;
+}
+
+.input-group {
+  align-items: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.2);
+}
