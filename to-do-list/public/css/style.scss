@@ -1,0 +1,114 @@
+@import "./global";
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+%reset {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+
+/*PEN STYLES*/
+.tasker {
+  max-width: 400px;
+  background-color: $dark;
+  padding: 20px;
+  @include corners (5px);
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+
+	.error {
+		display: none;
+		color: $error;
+		padding: 10px;
+		text-align: center;
+	}
+
+	ul {
+		color: white;
+	}
+
+	li,
+	.error,
+	button,
+	input {
+		@extend %reset;
+	}
+}
+
+.tasker-header {
+  display: inline-flex;
+	background: $dark;
+	justify-content: space-between;
+	width: 100%;
+  @include corners (5px);
+  overflow: hidden;
+
+	input,
+	button {
+    background-color: $grey;
+		color: #fff;
+		box-sizing: border-box;
+		font-size: 1.25em;
+		padding: 14px;
+	}
+
+	input {
+		flex-grow: 2;
+	}
+
+	button {
+		border-left: 1px solid white;
+    cursor: pointer;
+	}
+}
+
+.tasker-body {
+	.task {
+		display: block;
+		position: relative;
+		padding: 14px 40px 14px 14px;
+		&:last-child {
+			border-bottom: none;
+		}
+
+		&:hover > button {
+			opacity: 1;
+		}
+
+		&.completed {
+			color: $grey;
+			text-decoration: line-through;
+		}
+
+		input {
+			margin-right: 10px;
+		}
+
+		button {
+			color: $grey;
+			margin: 14px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			opacity: 0;
+      cursor: pointer;
+      
+			&:hover {
+				color: $error;
+			}
+		}
+	}
+}
