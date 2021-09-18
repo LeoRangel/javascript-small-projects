@@ -1,0 +1,76 @@
+@import "./global";
+
+
+header {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.slider {
+  flex: 1;
+  overflow: hidden;
+}
+
+.slider-width {
+  height: 100%;
+  display: flex;
+  transition: all ease 0.3s;
+}
+
+.slider-item {
+  width: 100vw;
+  height: inherit;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0px 1px 1px #333;
+  font-size: 50px;
+}
+
+.slider-controls {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .slider-control-prev,
+  .slider-control-next {
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    span {
+      color: white;
+      text-shadow: 0px 1px 1px #333;
+      font-size: 3rem !important;
+    }
+  }
+  
+  .slider-control-prev{
+    &:hover {
+      @include gradient-slider (right);
+    }
+  }
+  .slider-control-next{
+    &:hover {
+      @include gradient-slider (left);
+    }
+  }
+}
+
+.calculator {
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  background-color: $dark;
+  @include corners (5px);
+}
