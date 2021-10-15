@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CEP</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body class="m-0 p-0">
+
+    <main>
+
+        <div class="px-4 py-4 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-geo-alt d-block mx-auto mb-4" viewBox="0 0 16 16">
+                <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            </svg>
+            <h1 class="display-5 fw-bold">CONSULTAR CEP</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">A API do 'viacep.com.br' retorna todas as informações a baixo com base no CEP
+                    digitado</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container py-4">
+
+            <form>
+                <div class="row">
+                    <div class="form-group mb-3 col-md-2">
+                        <label for="cep">CEP</label>
+                        <input type="text" class="form-control" maxlength="9" id="cep">
+                    </div>
+                    <div class="form-group mb-3 col-md-5">
+                        <label for="logradouro">Logradouro</label>
+                        <input type="text" class="form-control" id="logradouro" disabled>
+                    </div>
+                    <div class="form-group mb-3 col-md-5">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" class="form-control" id="complemento" disabled>
+                    </div>
+                    <div class="form-group mb-3 col-md-5">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" disabled>
+                    </div>
+                    <div class="form-group mb-3 col-md-5">
+                        <label for="localidade">Localidade</label>
+                        <input type="text" class="form-control" id="localidade" disabled>
+                    </div>
+                    <div class="form-group mb-3 col-md-2">
+                        <label for="uf">UF</label>
+                        <input type="text" class="form-control" id="uf" disabled>
+                    </div>
+
+                    <div class="form-group mb-3 col-md-3">
+                        <label for="ibge">Ibge</label>
+                        <input type="text" class="form-control" id="ibge" disabled>
+                    </div>
+                    <div class="form-group mb-3 col-md-3">
+                        <label for="gia">Gia</label>
+                        <input type="text" class="form-control" id="gia" disabled>
+                    </div>
+                    <div class="form-group mb-3 col-md-3">
+                        <label for="ddd">DDD</label>
+                        <input type="text" class="form-control" id="ddd" disabled>
+                    </div>
+                    <div class="form-group mb-3 col-md-3">
+                        <label for="siafi">Siafi</label>
+                        <input type="text" class="form-control" id="siafi" disabled>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="src/js/main.js"></script>
+
+</body>
+
+</html>
