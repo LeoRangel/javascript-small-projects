@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    background-color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main-game {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genius {
+    display: grid;
+    grid-template-areas: 'green-area red-area'
+    'yellow-area blue-area';
+    grid-gap: 15px;
+    border: 20px solid #1F1E1F;
+    background-color: #1F1E1F;
+    border-radius: 100%;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    -webkit-box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
+    
+}
+
+.game-menu {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background-color: rgb(209, 209, 209);
+    color: #1F1E1F;
+    border: 15px solid #1F1E1F;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-menu h1 {
+    font-weight: lighter;
+    font-size: 3rem;
+}
+
+.blue {
+    grid-area: blue-area;
+    background-color: blue;
+    border-radius: 0 5px 100% 5px;
+    opacity: 0.5;
+}
+
+.red {
+    grid-area: red-area;
+    background-color: red;
+    border-radius: 5px 100% 5px 0;
+    opacity: 0.5;
+}
+
+.yellow {
+    grid-area: yellow-area;
+    background-color: yellow;
+    border-radius: 5px 0 5px 100%;
+    opacity: 0.5;
+}
+
+.green {
+    grid-area: green-area;
+    background-color: green;
+    border-radius: 100% 5px 0 5px;
+    opacity: 0.5;
+}
+
+.selected {
+    opacity: 1;
+}
