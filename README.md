@@ -3,10 +3,11 @@ A collection of small JavaScript projects to study
 
 ## Projects List
 - calculator
-- consulta-cep
-- :brain: genius-game
+- consulta cep
+- :brain: genius game
 - slider
 - smartwatch
-- tip-calculator
-- to-do-list
+- :snake: snake game
+- tip calculator
+- to-do list
 - urna
