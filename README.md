@@ -2,12 +2,13 @@
 A collection of small JavaScript projects to study
 
 ## Projects List
-- calculator
-- consulta cep
+- :heavy_plus_sign: calculator
+- :round_pushpin: consulta cep
 - :brain: genius game
-- slider
-- smartwatch
+- :helicopter: Rescue Helicopter Game
+- :arrow_forward: slider
+- :watch: smartwatch
 - :snake: snake game
-- tip calculator
-- to-do list
-- urna
+- :dollar: tip-calculator
+- :pushpin:	to-do list
+- :brazil: urna
